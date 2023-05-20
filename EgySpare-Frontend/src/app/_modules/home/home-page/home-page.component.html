@@ -1,0 +1,120 @@
+<div class="overlay" data-overlay></div>
+<div class="banner">
+  <div class="container">
+    <div class="slider-container has-scrollbar">
+      <div class="slider-item">
+        <img [src]="frontImg" alt="modern Cars" class="banner-img" />
+
+        <div class="banner-content">
+          <p class="banner-subtitle">Trending accessories</p>
+
+          <h2 class="banner-title">Modern Cars Spare</h2>
+
+          <a href="#" class="banner-btn">Shop now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Popular brands">
+  <div class="container">
+    <h2 class="title">POPULAR BRAND</h2>
+    <div class="category-item-container has-scrollbar">
+      <!-- one  -->
+      <div class="category-item" *ngFor="let item of brand">
+        <div class="category-img-box">
+          <img [src]="item.imgPath" [alt]="item.name" width="100" />
+        </div>
+
+        <div class="category-content-box">
+          <div class="category-content-flex">
+            <h3 class="category-item-title">{{ item.name }}</h3>
+          </div>
+
+          <a href="#" class="category-btn">Show all</a>
+        </div>
+      </div>
+      <!-- 2  -->
+      <div class="category-item" *ngFor="let item of brand">
+        <div class="category-img-box">
+          <!-- <img [src]="'assets' + item.imgPath" [alt]="item.name" width="100" /> -->
+          <img [src]="item.imgPath" [alt]="item.name" width="100" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="product-container">
+  <div class="container">
+    <div class="product-box">
+      <div class="product-main">
+        <h2 class="title">PRODUCTS</h2>
+
+        <div class="product-grid">
+          <!-- 01 -->
+          <div *ngFor="let item of Products" class="showcase">
+            <div class="showcase-banner">
+              <img [src]="item.imgPath" alt="cars Product" width="300" class="product-img default" />
+              <img [src]="item.imgPath" alt="cars Product" width="300" class="product-img hover" />
+
+              <div class="showcase-actions">
+                <button class="btn-action">
+                  <!-- <ion-icon name="heart-outline"></ion-icon> -->
+                </button>
+
+                <button class="btn-action">
+                  <!-- <ion-icon name="bag-add-outline"></ion-icon> -->
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-content">
+              <a href="#" class="showcase-category">{{ item.name }}</a>
+
+              <a href="#">
+                <h3 class="showcase-title">{{ item.id }}</h3>
+              </a>
+              <div class="showcase-rating">
+                <!-- <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon> -->
+                <i class="fa-light fa-plus"></i>
+              </div>
+
+              <div class="price-box">
+                <p class="price">{{ item.price }}</p>
+                <!-- <del>2000 EGP</del> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-btn-div">
+    <a href="#" class="product-btn">View All Products </a>
+  </div>
+</section>
+
+<div class="category">
+  <div class="container">
+    <h2 class="title">Categories</h2>
+    <div class="view-flex row" *ngFor="let item of Categories">
+      <!-- one  -->
+
+      <div class="col" style="display: inline">
+        <div class="">
+          <img [src]="item.imgPath" [alt]="item.name" width="100px" class="default" />
+
+          <h3 class="category-item-title">{{ item.name }}</h3>
+          <a href="#" class="category-btn">Show all</a>
+          <div class="showcase-actions"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

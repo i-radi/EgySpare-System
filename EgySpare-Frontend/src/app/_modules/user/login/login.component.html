@@ -1,0 +1,26 @@
+<section class="singupPage my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="aline">
+          <img src="/assets/car/signup.jpg" />
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="aline">
+          <h1 class="singupword">Log in</h1>
+          <div>
+            <p class="inputsword">User Name</p>
+            <input class="inputs" type="text" [(ngModel)]="user.email" />
+          </div>
+          <p class="inputsword">Passwoed</p>
+          <input class="inputs" type="password" [(ngModel)]="user.password" />
+          <br />
+          <button class="size_bnt_login Add_button" (click)="login()">
+            login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

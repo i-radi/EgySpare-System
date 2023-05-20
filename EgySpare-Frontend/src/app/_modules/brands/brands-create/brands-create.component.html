@@ -1,0 +1,8 @@
+id<input [(ngModel)]="nbrand.id" type="text" /><br />
+name<input [(ngModel)]="nbrand.name" type="text" /><br />
+
+select Img <input type="file" (change)="onselectFile($event)" /><br />
+
+<button class="btn btn-success" (click)="save()">save</button><br />
+
+<button class="btn btn-primary" (click)="back()">back</button>

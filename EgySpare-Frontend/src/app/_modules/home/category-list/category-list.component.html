@@ -1,0 +1,25 @@
+<div class="category">
+  <div class="container">
+    <h2 class="title">Categories</h2>
+    <div
+      class="category-item-container has-scrollbar"
+      *ngFor="let item of Cetegories"
+    >
+      <!-- one  -->
+      <div class="category-item">
+        <div class="showcase-banner">
+          <!-- <img
+            [src]="'assets' + item.imgPath"
+            [alt]="'assets' + item.imgPath"
+            width="250"
+            class="product-img default"
+          /> -->
+          <img src="assets/car/16157.webp" alt="img" />
+          <h3 class="category-item-title">{{ item.name }}</h3>
+          <a href="#" class="category-btn">Show all</a>
+          <div class="showcase-actions"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

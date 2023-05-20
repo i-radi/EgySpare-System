@@ -1,0 +1,63 @@
+<section class="product-container">
+  <div class="container">
+    <div class="product-box">
+      <div class="product-main">
+        <h2 class="title">PRODUCTS</h2>
+
+        <div class="product-grid">
+          <!-- 01 -->
+          <div *ngFor="let item of Products" class="showcase">
+            <div class="showcase-banner">
+              <img
+                [src]="item.imgPath"
+                alt="Mens Winter Leathers Jackets"
+                width="300"
+                class="product-img default"
+              />
+              <img
+                [src]="item.imgPath"
+                alt="Mens Winter Leathers Jackets"
+                width="300"
+                class="product-img hover"
+              />
+
+              <div class="showcase-actions">
+                <button class="btn-action">
+                  <!-- <ion-icon name="heart-outline"></ion-icon> -->
+                </button>
+
+                <button class="btn-action">
+                  <!-- <ion-icon name="bag-add-outline"></ion-icon> -->
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-content">
+              <a href="#" class="showcase-category">{{ item.name }}</a>
+
+              <a href="#">
+                <h3 class="showcase-title">{{ item.id }}</h3>
+              </a>
+              <div class="showcase-rating">
+                <!-- <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon> -->
+                <i class="fa-light fa-plus"></i>
+              </div>
+
+              <div class="price-box">
+                <p class="price">{{ item.price }}</p>
+                <!-- <del>2000 EGP</del> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-btn-div">
+    <a href="#" class="product-btn">View All Products </a>
+  </div>
+</section>

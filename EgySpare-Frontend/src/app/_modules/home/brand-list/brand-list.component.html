@@ -1,0 +1,63 @@
+<!-- <main> -->
+<!--
+      - BANNER
+    -->
+
+<div class="overlay" data-overlay></div>
+<div class="banner">
+  <div class="container">
+    <div class="slider-container has-scrollbar">
+      <div class="slider-item">
+        <img [src]="frontImg" alt="modern sunglasses" class="banner-img" />
+
+        <div class="banner-content">
+          <p class="banner-subtitle">Trending accessories</p>
+
+          <h2 class="banner-title">Modern Cars Spare</h2>
+
+          <a href="#" class="banner-btn">Shop now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Popular brands">
+  <div class="container">
+    <h2 class="title">POPULAR BRAND</h2>
+    <div class="category-item-container has-scrollbar">
+      <!-- one  -->
+      <div class="category-item" *ngFor="let item of brand">
+        <div class="category-img-box">
+          <!-- <img [src]="'assets' + item.imgPath" [alt]="item.name" width="100" /> -->
+
+          <img
+            src="assets/car/toyota-car-logo-6968.png"
+            [alt]="item.name"
+            width="100"
+          />
+        </div>
+
+        <div class="category-content-box">
+          <div class="category-content-flex">
+            <h3 class="category-item-title">{{ item.name }}</h3>
+          </div>
+
+          <a href="#" class="category-btn">Show all</a>
+        </div>
+      </div>
+      <!-- 2  -->
+      <div class="category-item" *ngFor="let item of brand">
+        <div class="category-img-box">
+          <!-- <img [src]="'assets' + item.imgPath" [alt]="item.name" width="100" /> -->
+          <img [src]="'assets' + item.imgPath" [alt]="item.name" width="100" />
+          <img
+            src="assets/car/toyota-car-logo-6968.png"
+            [alt]="item.name"
+            width="100"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+.active {
+  color: brown;
+}
+mat-toolbar {
+  background: #6667ab;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  height: 75px;
+  font-size: 3rem;
+}
+
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background: #002b5c;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+a {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.content {
+  /* height: calc(100vh - 98px); */
+  /* height: fit-content; */
+  height: 1000px;
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  color: lightgray;
+}

@@ -1,0 +1,27 @@
+<p>categories-create works!</p>
+
+id<input [(ngModel)]="ncat.id" type="text" /><br />
+name<input [(ngModel)]="ncat.name" type="text" /><br />
+
+select Img <input type="file" (change)="onselectFile($event)" /><br />
+
+<button class="btn btn-success" (click)="save()">save</button><br />
+
+<button class="btn btn-primary" (click)="back()">back</button>
+
+<!-- <form #t ="ngForm"  (ngSubmit)="save()">
+    id<input [(ngModel)]="ncat.id" type="text" name="catId"  #cat="ngModel" required>
+    <span *ngIf="cat.touched && cat.invalid">
+    id required
+    </span><br/>
+    name<input [(ngModel)]="ncat.name" type="text" name="catName" #catnamee="ngModel" required >
+    <input type="submit" [disabled]="t.invalid">
+    <span *ngIf="catnamee.touched && catnamee.invalid">
+        name required
+        </span><br/>
+
+
+
+        select Img <input type="file" (change)="onselectFile($event)"  name="catimg"  required><br/>
+
+    </form> -->

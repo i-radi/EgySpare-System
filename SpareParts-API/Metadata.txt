@@ -1,0 +1,15 @@
+Accounts in DataBase
+Admin:
+	admin@mail.com - name:Ali
+Vendor:
+	vendor1@mail.com - name:Mona
+	vendor2@mail.com - name:Ahmed
+Client:
+	client1@mail.com - name:Maha
+	client2@mail.com - name:Mohamed
+Password:
+	Pa$$w0rd
+
+Products ==> 135 product
+Brands ==> 10 brand
+Categories==> 11 category

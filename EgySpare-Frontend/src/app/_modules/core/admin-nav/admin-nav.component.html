@@ -1,0 +1,33 @@
+<br />
+<br />
+<br />
+<br />
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    <a routerLink="/categories" routerLinkActive="active">categories</a><br />
+
+    <a routerLink="/admin/product/list" routerLinkActive="active">products</a
+    ><br />
+    <a routerLink="/admin/brand/list" routerLinkActive="active">brands</a><br />
+    <a routerLink="/admin/users/list" routerLinkActive="active">users</a><br />
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- <a routerLink="/categories" routerLinkActive="active" >cat</a>|
+
+  <a routerLink="/admin/product/list" routerLinkActive="active">product</a>/
+  <a routerLink="/admin/brand/list" routerLinkActive="active">brand</a>/
+  <a routerLink="/admin/users/list" routerLinkActive="active">users</a>
+  <router-outlet></router-outlet>  -->
+
+<!-- t8er el sora  -->
+
+<!-- <img   [src]="url" height="200" >
+
+  <input type="file"  (change)="onselectFile($event)" >  -->

@@ -1,0 +1,75 @@
+<div class="wrapper bg-white mt-sm-5">
+  <h4 class="pb-4 border-bottom">Edit Account settings</h4>
+  <!-- <div class="d-flex align-items-start py-3 border-bottom">
+      <img src="https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          class="img" alt="">
+      <div class="pl-sm-4 pl-2" id="img-section">
+          <b>Profile Photo</b>
+          <p>Accepted file type .png. Less than 1MB</p>
+          <button class="btn button border"><b>Upload</b></button>
+      </div>
+  </div> -->
+  <div class="py-2">
+    <div class="row py-2">
+      <div class="col-md-12 my-1">
+        <label for="firstname">Name</label>
+        <input type="text" hidden [(ngModel)]="set.id" />
+        <input
+          type="text"
+          class="bg-light form-control mt-1"
+          placeholder="Nader"
+          [(ngModel)]="set.name"
+        />
+      </div>
+      <div class="col-md-12 pt-md-0 pt-3 my-1">
+        <label for="lastname">User Name</label>
+        <input
+          type="text"
+          class="bg-light form-control mt-1"
+          placeholder="Ezzat"
+          [(ngModel)]="set.userName"
+        />
+      </div>
+    </div>
+    <div class="row py-2">
+      <div class="col-md-15 my-1">
+        <label for="email">Email Address</label>
+        <input
+          type="text"
+          class="bg-light form-control mt-1"
+          placeholder="Nader@email.com"
+          [(ngModel)]="set.email"
+        />
+      </div>
+      <div class="col-md-12 pt-md-0 pt-3 my-1">
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          class="bg-light form-control mt-1"
+          placeholder="01003179394"
+          [(ngModel)]="set.phoneNumber"
+        />
+      </div>
+    </div>
+    <!-- <ng-container *ngFor="let item of set"> -->
+    <div class="py-3 pb-4 border-bottom my-1">
+      <button
+        class="btn mr-3 ml-1 size_bnt_login Add_button"
+        (click)="change()"
+      >
+        Save Changes
+      </button>
+      <!-- <button class="btn border button">Cancel</button> -->
+    </div>
+    <!-- </ng-container> -->
+    <!-- <div class="d-sm-flex align-items-center pt-3" id="deactivate">
+          <div>
+              <b>Deactivate your account</b>
+              <p>Details about your company account and password</p>
+          </div>
+          <div class="ml-auto">
+              <button class="btn Add_button">Deactivate</button>
+          </div>
+      </div> -->
+  </div>
+</div>

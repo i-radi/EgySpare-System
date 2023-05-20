@@ -1,0 +1,33 @@
+<br /><br />
+<button class="btn btn-success" (click)="gotocreate()">
+  create new category
+</button>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Img</th>
+      <th>Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of cat">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>
+        <img src="{{ item.imgPath }}" style="width: 100px; height: 100px" />
+      </td>
+
+      <td>
+        <button class="btn btn-success" (click)="deleteCategory(item.id)">
+          Delete
+        </button>
+        <br />
+        <button class="btn btn-primary" (click)="gotoupdate(item.id)">
+          update
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+<p>brands-update works!</p>
+
+name<input type="text" [(ngModel)]="brand.name" /><br />
+
+<img src="{{ brand.imgPath }}" style="height: 100px; width: 100px" /><br />
+
+<input type="file" (change)="onselectFile($event)" />
+
+<button class="btn btn-success" (click)="save()">submit</button><br />
+
+<button class="btn btn-success" (click)="back()">Back to list</button>

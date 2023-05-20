@@ -1,0 +1,26 @@
+<p>product-create works!</p>
+
+id <input type="text" [(ngModel)]="npro.id" /><br />
+name <input type="text" [(ngModel)]="npro.name" /><br />
+
+price <input type="text" [(ngModel)]="npro.price" /><br />
+
+brandName
+<select [(ngModel)]="npro.brandId">
+  <option *ngFor="let item of nbrand" [value]="item.id">
+    {{ item.name }}
+  </option></select
+><br />
+
+categoryName
+<select [(ngModel)]="npro.categoryId">
+  <option *ngFor="let item of ncat" [value]="item.id">
+    {{ item.name }}
+  </option>
+</select>
+<br />
+--> select Img <input type="file" (change)="onselectFile($event)" /><br />
+
+<button class="btn btn-success" (click)="save()">save</button><br />
+
+<button class="btn btn-primary" (click)="back()">back</button>

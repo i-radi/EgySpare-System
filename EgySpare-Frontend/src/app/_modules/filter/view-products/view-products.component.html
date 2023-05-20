@@ -1,0 +1,76 @@
+<section class="banner mt-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="custome-sidebar text-nowrap col-lg-2 col-md-4 col-sm-4">
+        <h6>Categories</h6>
+
+        <ul class="list-group">
+          <select [(ngModel)]="dummyId">
+            <ng-container *ngFor="let item of categories">
+              <option class="list-group-item" #ref [value]="item.id">
+                {{ item.name }}
+              </option>
+            </ng-container>
+          </select>
+          <p hidden>{{ dummyId }}</p>
+          <button (click)="save($event)" class="btn btn-success">change</button>
+        </ul>
+        <ul class="list-group">
+          <h6>Popular brands</h6>
+          <select [(ngModel)]="dummyId2">
+            <ng-container *ngFor="let item of brands">
+              <br />
+              <option #ref [value]="item.id">{{ item.name }}</option>
+            </ng-container>
+          </select>
+          <p hidden>{{ dummyId2 }}</p>
+          <button class="btn btn-success" (click)="change($event)">
+            change
+          </button>
+        </ul>
+        <ul>
+          <h6>Price</h6>
+          <p>{{ newProduct.price }}</p>
+        </ul>
+        <ul>
+          <h6>Best Seller</h6>
+        </ul>
+      </div>
+      <div class="view-flex col-lg-10 col-md-8 col-sm-8">
+        <div class="col-lg-2 col-md-2 col-sm-2" *ngFor="let item of products">
+          <div class="card card-body custom-card">
+            <img
+              [src]="item.imgPath"
+              class="custom-img-card image"
+              [alt]="item.name"
+            />
+            <div class="card-body">
+              <h5 class="card-title title-desc">{{ item.name }}</h5>
+              <p class="card-text txt-price">{{ item.price }}</p>
+              <a
+              (click)="viewinfo(item)"
+                
+                class="btn btn-primary btn-custom1"
+                >view info</a
+              >
+              <input type="text" #cardId hidden [value]="item.id" />
+              <button>
+                <a (click)="addCard(cardId.value)">Add to Card</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="view-all mt-3 text-center fs-4">View All Products</a>
+</section>
+<nav aria-label="..." class="text-end" style="display: block">
+  <ul class="pagination pagination-sm">
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">1</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+  </ul>
+</nav>
